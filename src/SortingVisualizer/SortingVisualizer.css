@@ -1,0 +1,27 @@
+.array-operations {
+    display: flex;
+    margin: 5px;
+}
+
+
+
+.array-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 1250px;
+    /* position: absolute; */
+    /* left: 100px; */
+    /* margin: auto; */
+    justify-content: left;
+    border: solid blueviolet;
+
+}
+
+.array-element {
+    width: 100%;
+    display: inline-block;
+    margin: 0 1px;
+    /* margin: 2px; */
+}
