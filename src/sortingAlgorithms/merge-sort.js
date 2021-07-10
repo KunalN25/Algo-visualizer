@@ -46,17 +46,25 @@ function doMerge(
     if (auxiliaryArray[i] <= auxiliaryArray[j]) {
       
       animations.push([k, auxiliaryArray[i]]);
+
+      animations.push([k, auxiliaryArray[i]]);
+
       mainArray[k++] = auxiliaryArray[i++];
       // We overwrite the value at index k in the original array with the
       // value at index i in the auxiliary array.
     } else {
       
       animations.push([k, auxiliaryArray[j]]);
+
+      animations.push([k, auxiliaryArray[j]]);
+
       mainArray[k++] = auxiliaryArray[j++];
       // We overwrite the value at index k in the original array with the
       // value at index j in the auxiliary array.
     }
   }
+
+  // Adding remaining elements in left subarray if present
   while (i <= middleIdx) {
     
     animations.push([i, i]);
@@ -68,10 +76,15 @@ function doMerge(
     // time to revert their color.
     
     animations.push([k, auxiliaryArray[i]]);
+
+    animations.push([k, auxiliaryArray[i]]);
+
     mainArray[k++] = auxiliaryArray[i++];
     // We overwrite the value at index k in the original array with the
     // value at index i in the auxiliary array.
   }
+
+  // Adding remaining elements in right sub array if present
   while (j <= endIdx) {
     // These are the values that we're comparing; we push them once
     // to change their color.
@@ -82,6 +95,11 @@ function doMerge(
     // We overwrite the value at index k in the original array with the
     // value at index j in the auxiliary array.
     animations.push([k, auxiliaryArray[j]]);
+    //First time to change colour to swapping
+
+    animations.push([k, auxiliaryArray[j]]);
+    //Second time to change colour back
+
     mainArray[k++] = auxiliaryArray[j++];
   }
 }
